@@ -159,10 +159,15 @@ export default function AddUserComponent(props) {
                 />
               </Col>
             </Form.Group>
-            <Button variant="primary" onClick={handleSubmit}>
+          </Form>
+          <Modal.Footer>
+            <Button variant="success" onClick={handleSubmit}>
               Submit
             </Button>
-          </Form>
+            <Button variant="danger" onClick={handleClose}>
+              Cancel
+            </Button>
+          </Modal.Footer>
         </Modal.Body>
       </Modal>
     </>

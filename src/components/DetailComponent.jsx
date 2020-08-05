@@ -23,7 +23,7 @@ export default function DetailComponent(props) {
       {user.company ? (
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>{user.name}</Modal.Title>
+            <Modal.Title>Detail const [state, dispatch] = useReducer(reducer, initialState, init)</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Table striped bordered hover>

@@ -5,7 +5,7 @@ import AddUser from './AddComponent'
 export default function NavbarComponent() {
   return (
     <>
-      <Navbar bg="primary" variant="dark">
+      <Navbar bg="primary" variant="dark" sticky="top">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
           <AddUser />

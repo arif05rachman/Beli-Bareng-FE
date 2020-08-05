@@ -5,6 +5,7 @@ import { getListUser } from '../store/actions'
 import { Container, Col, Spinner } from 'react-bootstrap'
 import Navbar from "../components/NavbarComponent";
 import Card from "../components/CardComponent";
+import Footer from "../components/FooterComponent";
 
 export default function Home() {
   const dispatch = useDispatch()
@@ -16,22 +17,23 @@ export default function Home() {
     <>
       <Navbar />
       <Container fluid className="my-3">
-        <div className="row justify-content-center">
+          <div
+            className="text-center mx-2 mt-5 row justify-content-center"
+          >
           {users ? (
             users.map((user) => {
               return (
-                <Col key={user.id}>
                   <Card user={user} />
-                </Col>
-              );
-            })
-          ) : (
-            <Spinner animation="border" role="status">
+                  );
+                })
+                ) : (
+                  <Spinner animation="border" role="status">
               <span className="sr-only">Loading...</span>
             </Spinner>
           )}
         </div>
       </Container>
+      <Footer />
     </>
   );
 }
